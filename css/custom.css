@@ -67,3 +67,15 @@ button:hover,
 a:hover {
     opacity: 0.7;
 }
+
+.leftSide {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.content {
+    margin-left: 350px;
+    padding: 20px;
+}
