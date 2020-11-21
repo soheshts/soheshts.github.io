@@ -71,7 +71,7 @@ a:hover {
 .leftSide {
     position: fixed;
     left: 0;
-    bottom: 0;
+/*    bottom: 0;*/
     top: 0;
 }
 
@@ -81,4 +81,7 @@ a:hover {
 }
 .imgBorder{
     border: 15px solid aliceblue;
+}
+.padtop{
+    padding-top: 1px;
 }
