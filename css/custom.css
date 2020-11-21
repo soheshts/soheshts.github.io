@@ -6,7 +6,7 @@ html {
 
 .bg {
     /* The image used */
-    background-color: floralwhite;
+    background-color: white;
     font-family: "Lucida Console", Monaco, monospace;
 
     /* Full height */
@@ -31,12 +31,12 @@ html {
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
     text-align: center;
     font-family: arial;
-    background-color: white;
+    background-color: aliceblue;
 }
 
 .title {
@@ -78,4 +78,7 @@ a:hover {
 .content {
     margin-left: 350px;
     padding: 20px;
+}
+.imgBorder{
+    border: 15px solid aliceblue;
 }
