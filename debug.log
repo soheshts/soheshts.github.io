@@ -1,3 +1,0 @@
-[1119/213537.205:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
-[1119/223127.975:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\sohesh\AppData\Roaming\Brackets\live-dev-profile\Crashpad\attachments\061c89c7-57f3-4e1a-8561-a93699eeabdb: The system cannot find the path specified. (0x3)
-[1119/232719.681:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
