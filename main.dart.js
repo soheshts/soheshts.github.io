@@ -56194,7 +56194,7 @@ l=K.cx(N.fd(K.cV(12)),C.aw.h(0,100),2,C.ab,C.E)
 o=T.dm(M.bP(i,M.e4(T.di(L.ef("Flutter",i,i,i),i,i),l),C.l,i,i,i,i,100,o,i,i,i,i),1)
 l=V.eA(20)
 j=K.cx(N.fd(K.cV(12)),C.aw.h(0,100),2,C.ab,C.E)
-return H.c([h,M.bP(i,T.y5(H.c([n,p,m,T.eL(H.c([k,o,T.dm(M.bP(i,M.e4(T.di(L.ef("Rabbit MQ",i,i,i),i,i),j),C.l,i,i,i,i,100,l,i,i,i,i),1)],g),C.M,C.aC)],g),C.M,C.aC,C.fH),C.l,i,i,i,i,i,i,i,i,i,i),M.bP(i,T.dm(new L.qk("/assets/pages/test.html",!1,!1,!1,new F.Ya(),i),1),C.l,i,i,i,i,i,i,i,i,i,i)],g)})
+return H.c([h,M.bP(i,T.y5(H.c([n,p,m,T.eL(H.c([k,o,T.dm(M.bP(i,M.e4(T.di(L.ef("Rabbit MQ",i,i,i),i,i),j),C.l,i,i,i,i,100,l,i,i,i,i),1)],g),C.M,C.aC)],g),C.M,C.aC,C.fH),C.l,i,i,i,i,i,i,i,i,i,i),M.bP(i,T.dm(new L.qk("assets/assets/pages/test.html",!1,!1,!1,new F.Ya(),i),1),C.l,i,i,i,i,i,i,i,i,i,i)],g)})
 q($,"aot","a4h",function(){return new P.v()})
 q($,"aiR","amZ",function(){return new F.Q9($.a4h())})})();(function nativeSupport(){!function(){var s=function(a){var m={}
 m[a]=1
