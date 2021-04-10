@@ -1,92 +1,12 @@
 [
     {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
+        "title": "Second Post",
+        "date" : "10/04/2021",
+        "file" : "second.html"
     },
     {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
+        "title": "First Post",
+        "date" : "10/04/2021",
         "file" : "test.html"
-
-    },
-    {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
-    },
-    {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
-    },
-    {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
-    },
-    {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
-    },
-    {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
-    },
-    {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
-    },
-    {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
-    },
-    {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
-    },
-    {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
-    },
-    {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
-    },
-    {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
-    },
-    {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
-    },
-    {
-        "title": "Sample post title",
-        "date" : "06/04/2021",
-        "file" : "test.html"
-
-    }
+    }    
 ]
