@@ -11,24 +11,33 @@
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- <script src="https://kit.fontawesome.com/cc8d569a53.js" crossorigin="anonymous"></script> -->
+    <style>
+        
+    </style>
 </head>
 
-<body>
-    <div class=" uk-position-cover toggle ">
-        <nav class="uk-navbar-container " uk-navbar>
+<body class="body">
+    <div class=" uk-position-cover uk-flexuk-width-expand uk-width-1-1 uk-height-1-1 toggle">
+        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+            <nav class="uk-navbar-container " uk-navbar>
 
-            <div class="toggle uk-width-1-1 ">
-                <ul class="uk-navbar-nav">
-                    <li onclick="hideSkills()"><a href="#">Home</a></li>
-                    <li onclick="hideMain()"><a href="#">Skills</a></li>
-                    <li uk-toggle="target: .toggle; cls: uk-background-secondary uk-light;"><a href="#">Toggle</a></li>
-                </ul>
+                <div class="toggle uk-width-1-1 ">
+                    <ul class="uk-navbar-nav">
+                        <li onclick="showMain()"><a href="#">Home</a></li>
+                        <li onclick="showSkills()"><a href="#">Skills</a></li>
+                        <li onclick="showBlogList()"><a href="#">Blog</a></li>
+                        <li uk-toggle="target: .toggle; cls: uk-background-secondary uk-light;"><a href="#">Toggle</a>
+                        </li>
+                    </ul>
 
-            </div>
-        </nav>
-        <div class="uk-container uk-position-center uk-animation-fade">
+                </div>
+            </nav>
+        </div>
+        <div id="bio" class="uk-container uk-position-center uk-animation-fade">
 
             <div id="main" class="uk-height-medium ">
                 <img class="uk-align-center uk-border-circle" data-src="images/me.jpg" width="100" height="100" alt=""
@@ -50,11 +59,11 @@
                     <div><a class="uk-icon-button" href="https://twitter.com/soheshts"><span
                                 uk-icon="twitter"></span></a>
                     </div>
-                    <div>
+                    <!-- <div>
                         <a href="https://soshlism.blogspot.com/">
                             <h1 class="uk-text-center uk-text-muted uk-text-large">Blog</h1>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
 
 
@@ -75,23 +84,79 @@
 
 
             </div>
+
+        </div>
+        <div id="blogsection" class="uk-container toggle uk-align-center  uk-padding-small uk-margin-small ">
+            <div class=" uk-width-1-1 ">
+                <div>
+                    <div id="bloglist" class=" uk-width-1-1"></div>
+                </div>
+                <div id="postDiv" class=""><span onclick="hidePost()" uk-icon="icon:arrow-left; ratio:3"></span>
+                    <div id="blogPost" class="uk-align-center uk-width-2-3"></div>
+                </div>
+            </div>
         </div>
     </div>
     <script>
-        function hideSkills() {
-            console.log("hideSlikks");
+        var bloglist;
+        $(document).ready(function () {
+            $.get("bloglist.json", function (response) {
+                console.log("fetched data from file" + response);
+                bloglist = response;
+                console.log("blog list: " + JSON.stringify(bloglist));
+                var html = "";
+                $.each(bloglist, function (index, element) {
+                    html = html + ('<div onclick="viewPost(\'' + element.page + '\')" class="uk-card uk-card-hover uk-card-default toggle uk-margin-small uk-card-body uk-card-small "> <h3 class="">' + element.title + '</h3><p class="uk-article-meta">' + element.date + '</p></div>');
+                });
+                console.log(html);
+                $('#bloglist').html(html);
+            });
+            $('#blogsection').addClass('uk-hidden');
+        });
+        function showMain() {
+            console.log("showmain");
+            $('#bio').removeClass('uk-hidden');
             var element = document.getElementById("skills");
             element.classList.add("uk-hidden");
+            var element3 = document.getElementById("blogsection");
+            element3.classList.add("uk-hidden");
             var element2 = document.getElementById("main");
             element2.classList.remove("uk-hidden");
         }
-        function hideMain() {
-            console.log("hidemain");
-
+        function showSkills() {
+            console.log("showSkills");
+            $('#bio').removeClass('uk-hidden');
             var element = document.getElementById("main");
             element.classList.add("uk-hidden");
             var element2 = document.getElementById("skills");
             element2.classList.remove("uk-hidden");
+            var element3 = document.getElementById("blogsection");
+            element3.classList.add("uk-hidden");
+        }
+        function showBlogList() {
+            $('#bio').addClass('uk-hidden');
+            $('#blogsection').removeClass('uk-hidden');
+            $('#bloglist').removeClass('uk-hidden');
+            $('#postDiv').addClass('uk-hidden');
+
+        }
+        function viewPost(url) {
+            $('#bloglist').addClass('uk-hidden');
+            $('#postDiv').removeClass('uk-hidden');
+
+            $.get(url, function (response) {
+                console.log("fetched data from file" + response);
+                var converter = new showdown.Converter();
+                var html = converter.makeHtml(response);
+                $('#blogPost').html(html);
+            });
+
+        }
+        function hidePost() {
+            $('#bloglist').removeClass('uk-hidden');
+            $('#postDiv').addClass('uk-hidden');
+            $('#blogPost').html('');
+
         }
     </script>
 </body>
