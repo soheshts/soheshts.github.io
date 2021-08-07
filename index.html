@@ -16,7 +16,18 @@
 </head>
 
 <body>
-    <div id="body" class=" uk-position-cover ">
+    <div class=" uk-position-cover toggle ">
+        <nav class="uk-navbar-container " uk-navbar>
+
+            <div class="toggle uk-width-1-1 ">
+                <ul class="uk-navbar-nav">
+                    <li onclick="hideSkills()"><a href="#">Home</a></li>
+                    <li onclick="hideMain()"><a href="#">Skills</a></li>
+                    <li uk-toggle="target: .toggle; cls: uk-background-secondary uk-light;"><a href="#">Toggle</a></li>
+                </ul>
+
+            </div>
+        </nav>
         <div class="uk-container uk-position-center uk-animation-fade">
 
             <div id="main" class="uk-height-medium ">
@@ -45,16 +56,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="uk-grid uk-flex uk-flex-center uk-align-center uk-padding-small">
-                    <button class="uk-button uk-button-default" onclick="hideSkills()"><span uk-icon="home"></span>
-                        HOME</button>
-                    <button class="uk-button uk-button-default" onclick="hideMain()"><span uk-icon="code"></span>
-                        SKILLS</button>
-                    <button class="uk-button uk-button-default" type="button"
-                        uk-toggle="target: #body; cls: uk-background-secondary uk-light"><span uk-icon="paint-bucket"></span>
-                        Toggle</button>
 
-                </div>
 
 
             </div>
@@ -69,20 +71,7 @@
                 <p class="uk-text-center uk-text-muted uk-text-large">Microservices | WebServices</p>
                 <p class="uk-text-center uk-text-muted uk-text-large">Docker | RabbitMQ | Spring JPA | MS SQL</p>
                 <p class="uk-text-center uk-text-muted uk-text-large">HTML | JavaScript | JQuery | AJAX</p>
-                <!-- <p class="uk-text-center uk-text-muted uk-text-large">JBOSS  | Tomcat</p> -->
-                <!-- <p class="uk-text-center uk-text-muted uk-text-large">Flutter</p>-->
-                <hr class="uk-divider-icon">
 
-                <div class="uk-grid uk-flex uk-flex-center uk-align-center uk-padding-small">
-                    <button class="uk-button uk-button-default" onclick="hideSkills()"><span uk-icon="home"></span>
-                        HOME</button>
-                    <button class="uk-button uk-button-default" onclick="hideMain()"><span uk-icon="code"></span>
-                        SKILLS</button>
-                    <button class="uk-button uk-button-default" type="button"
-                        uk-toggle="target: #body; cls: uk-background-secondary uk-light"><span uk-icon="paint-bucket"></span>
-                        Toggle</button>
-
-                </div>
 
 
             </div>
