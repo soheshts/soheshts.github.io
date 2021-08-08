@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- <script src="https://kit.fontawesome.com/cc8d569a53.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/cc8d569a53.js" crossorigin="anonymous"></script>
     <style>
         .body-background {
             background-color: #222 !important;
@@ -32,7 +32,7 @@
                         <li onclick="showSkills()"><a href="#">Skills</a></li>
                         <li onclick="showBlogList()"><a href="#">Blog</a></li>
                         <li onclick="swapTheme()" uk-toggle="target: .toggle; cls: uk-background-secondary uk-light;"><a
-                                href="#">Toggle</a>
+                                href="#"><i id ="mode" class="fas fa-moon"></i></a>
                         </li>
                     </ul>
 
@@ -169,6 +169,15 @@
                 $('.card-toggle').removeClass('uk-card-secondary');
             else
                 $('.card-toggle').addClass('uk-card-secondary');
+            if($('#mode').hasClass('fa-moon')){
+                $('#mode').removeClass('fa-moon')
+                $('#mode').addClass('fa-sun')
+            }
+            else {
+                $('#mode').removeClass('fa-sun')
+                $('#mode').addClass('fa-moon')
+            }
+
         }
     </script>
 </body>
